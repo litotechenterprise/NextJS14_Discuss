@@ -4,9 +4,9 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("file:./dev.db")
+  url      = "./dev.db"
 }
-
+//env("DATABASE_URL")
 model Account {
   id                String  @id @default(cuid())
   userId            String
